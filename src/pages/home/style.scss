@@ -1,0 +1,42 @@
+.home-container {
+  width: 100%;
+  //background-color: $common-bg;
+  justify-content: flex-start;
+  overflow: scroll;
+  @include useTheme() {
+    background-color: getValue('common-bg');
+  }
+
+  .home-main {
+    height: 100vh;
+    justify-content: space-between;
+    // 移动端样式
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      padding: 60px 0 40px 0;
+    }
+
+    .home-user-info{
+      align-self: center;
+
+      .home-blog-name{
+        //color: $blog-name;
+        font-size: 40px;
+        padding-bottom: 30px!important;
+      }
+
+      .home-blog-title {
+        //color: $blog-title;
+      }
+    }
+
+    .home-bg-img{
+      align-self: flex-end;
+
+      .home-svg-bg{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
